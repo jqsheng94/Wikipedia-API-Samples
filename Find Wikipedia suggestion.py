@@ -1,3 +1,5 @@
+# For each word in the sentence, check the exitence of each word. If it's not in the Wikipedia, provide possible correct spelling suggestion
+
 from urllib.request import urlopen
 import simplejson as json
 import re
@@ -31,6 +33,7 @@ for i in Terms:
         suggestion.append('None')
     relatedTerms.append(Rec)
 
+# write the output in the suggestion.csv
 file_exists = os.path.isfile("PUT YOUR PATH IN HERE/suggestion.csv")
 with open("PUT YOUR PATH IN HERE/suggestion.csv", 'a') as csvfile:
     temp = csv.writer(csvfile, delimiter=',')
