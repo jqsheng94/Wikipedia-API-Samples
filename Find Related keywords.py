@@ -1,3 +1,6 @@
+# For each topic, find related terms from Wikipedia under certain language branch
+
+
 from urllib.request import urlopen
 import simplejson as json
 import urllib.parse
